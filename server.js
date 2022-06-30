@@ -63,7 +63,6 @@ app.get('/:link', async (req,res) => {
     'blogsinglepost', 'blogpage2', 'portofolio3', 'map']
 
     const newPageLink = req.params.link
-    // console.log(newPageLink);
     if(fileList.includes(newPageLink)){
     return res.render(__dirname + `/views/${newPageLink}.ejs`);
     }
