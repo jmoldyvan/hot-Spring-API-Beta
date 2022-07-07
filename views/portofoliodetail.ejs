@@ -23,7 +23,7 @@
 	<div class="headerlogo four columns">
 		<div class="logo">
 			<a href="/">
-			<h4>Studio Francesca</h4>
+			<h4>West Coast Hot Springs</h4>
 			</a>
 		</div>
 	</div>
@@ -35,13 +35,6 @@
 			<!-- <ul>
 				<li><a href="index2.html">Without slider</a></li>
 			</ul> -->
-			</li>
-			<li>
-			<a href="#">Portofolio</a>
-			<ul>
-				<li><a href="/portofolio3">3 Columns</a></li>
-				<li><a href="/portofoliodetail">Project Details</a></li>
-			</ul>
 			</li>
 			<li>
 			<a href="#">Blog</a>
@@ -76,7 +69,7 @@
 </div>
 <!-- SUBHEADER
 ================================================== -->
-<div id="subheader">
+<!-- <div id="subheader">
 	<div class="row">
 		<div class="twelve columns">
 			<p class="left">
@@ -89,62 +82,95 @@
 	</div>
 </div>
 <div class="hr">
+</div> -->
+
+<div id="subheader">
+	<div class="row">
+		<div class="eight columns">
+			<p class="bread leftalign">
+				<a href="/map" class="clear actbutton">To Map</a>
+				 <!-- You are here: <a href="/"> Home</a> / <a href="blogpage2.html">Blog second style</a> -->
+			</p>
+		</div>
+		<div class="four columns">
+			<div class="row collapse">
+				<div class="ten mobile-three columns">
+					<input type="text" class="nomargin" placeholder="Search...">
+				</div>
+				<div class="two mobile-one columns">
+					<a href="#" class="postfix button expand">Go</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+<div class="hr">
+</div>
+
 <!-- CONTENT 
 ================================================== -->
 <div class="row">
 	<!-- PROJECT DESCRIPTION-->
 	<div class="six columns">
 		<div class="sectiontitle">
-			<h4>Project name</h4>
+			<h4> <%= siteObj.name %> </h4>
 		</div>
 		<p>
-			Phasellus nec nibh id arcu pharetra blandit. Nullam mollis, lacus nec lacinia porttitor, odio eros laoreet nibh, at scelerisque magna justo eu turpis. Duis sed risus sit amet nunc cursus suscipit. Duis sed est turpis. Sed imperdiet elit eget massa consectetur sit amet rhoncus purus sagittis. Ut vitae nulla tempus erat accumsan porta a ut turpis. Suspendisse pharetra sagittis tellus, eu viverra neque molestie id.
+			<%= siteObj.description %>
 		</p>
 		<dl class="tabs">
 			<dd class="active"><a href="#simple1">Features</a></dd>
-			<dd><a href="#simple2">What we did</a></dd>
-			<dd><a href="#simple3">Client's Feedback</a></dd>
+			<dd><a href="#simple2">Facilities</a></dd>
+			<dd><a href="#simple3">Location Information</a></dd>
 		</dl>
 		<ul class="tabs-content">
 			<li class="active" id="simple1Tab">
-			<p>
+			<!-- <p>
 				 Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum venerunt. Sit enim idem caecus, debilis. Duo Reges: constructio interrete. Nulla tempus erat accumsan.
-			</p>
+			</p> -->
 			<div class="six columns noleftmargin">
 				<p>
-					words
+					<b>Open:</b> <%= siteObj.open %>
 				</p>
 				<p>
-					<img src="http://www.wowthemes.net/demo/studiofrancesca/images/check.png" alt=""><b>maxima parte</b>
+					<b>RoadAccess:</b> <%= siteObj.roadAccess %>
 				</p>
 			</div>
 			<div class="six columns">
 				<p>
-					<img src="http://www.wowthemes.net/demo/studiofrancesca/images/check.png" alt=""><b>genera formasque</b>
+					<b>Day Use Fee:</b> <%= siteObj.dayUseFee %>
 				</p>
 				<p>
-					<img src="http://www.wowthemes.net/demo/studiofrancesca/images/check.png" alt=""><b>quibus ad genera</b>
+					<b>State:</b> <%= siteObj.state %>
 				</p>
 			</div>
 			</li>
 			<li id="simple2Tab">
 			<p>
-				 Consectetur adipiscing elit. Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum.
+				 <b>Overnight Facilities:</b> <%= siteObj.overnightFacilities %>
 			</p>
 			<p>
-				<img src="http://www.wowthemes.net/demo/studiofrancesca/images/check.png" alt=""> genera formasque
+				<b>Resort:</b> <%= siteObj.resort %>
 			</p>
 			<p>
-				<img src="http://www.wowthemes.net/demo/studiofrancesca/images/check.png" alt=""> quibus ad genera
+				<b>Website:</b> <a href="<%= siteObj.website %>"><%= siteObj.website %></a>
 			</p>
-			<p>
+			<!-- <p>
 				 Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum venerunt. Sit enim idem caecus, debilis. Duo Reges: constructio interrete.
-			</p>
+			</p> -->
 			</li>
 			<li id="simple3Tab">
 			<p>
-				<i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum."</i>
+				<b>State:</b> <%= siteObj.state %>
+			</p>
+			<p>
+				<b>Area:</b> <%= siteObj.area %>
+			</p>
+			<p>
+				<b>Coordinates:</b> <%= siteObj.loc.coordinates %>
+			</p> 
+			<p >
+				<b>Google Map Link</b> <a href="<%= siteObj.googleLink %>"><%= siteObj.googleLink %></a>
 			</p>
 			<p>
 				<i>"Adipiscing elit. Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum."</i>
